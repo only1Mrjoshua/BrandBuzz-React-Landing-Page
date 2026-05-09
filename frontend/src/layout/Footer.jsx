@@ -1,3 +1,4 @@
+import React from "react";
 import { Megaphone } from "lucide-react";
 import { footerLinks, socialIcons } from "../utils/data";
 

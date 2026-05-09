@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function ServiceCard({ title, text, icon: Icon, color }) {
   return (
     <article className="rounded-xl bg-white p-6 shadow-lg transition hover:-translate-y-2 hover:shadow-xl">

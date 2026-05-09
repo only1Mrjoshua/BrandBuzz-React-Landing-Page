@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowDown, BarChart3, Eye, Laptop, MessageCircle } from "lucide-react";
 import Button from "../components/Button";
 import ServiceCard from "../components/ServiceCard";

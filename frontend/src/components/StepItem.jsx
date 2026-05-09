@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function StepItem({ number, title, text }) {
   return (
     <div className="flex gap-4">

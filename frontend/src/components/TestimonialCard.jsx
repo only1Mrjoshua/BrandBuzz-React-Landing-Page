@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function TestimonialCard({ avatar, name, role, quote, rating }) {
   return (
     <article className="min-w-full rounded-xl bg-white p-6 shadow-lg sm:min-w-[48%] lg:min-w-[31.5%]">
