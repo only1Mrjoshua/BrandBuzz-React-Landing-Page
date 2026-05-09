@@ -1,8 +1,14 @@
 import React from "react";
 
-export default function TestimonialCard({ avatar, name, role, quote, rating }) {
+export default function TestimonialCard({
+  avatar,
+  name,
+  role,
+  quote,
+  rating,
+}) {
   return (
-    <article className="min-w-full rounded-xl bg-white p-6 shadow-lg sm:min-w-[48%] lg:min-w-[31.5%]">
+    <article className="h-full rounded-xl bg-white p-6 shadow-lg">
       <div className="mb-4 flex items-center gap-3">
         <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fff1e8] text-xl">
           {avatar}
@@ -14,7 +20,9 @@ export default function TestimonialCard({ avatar, name, role, quote, rating }) {
         </div>
       </div>
 
-      <p className="mb-4 text-sm leading-relaxed text-[#6b7280]">{quote}</p>
+      <p className="mb-4 text-sm leading-relaxed text-[#6b7280]">
+        {quote}
+      </p>
 
       <div className="text-sm text-[#f05a1a]">
         {"★".repeat(rating)}
