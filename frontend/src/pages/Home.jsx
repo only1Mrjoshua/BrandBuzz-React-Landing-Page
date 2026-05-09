@@ -6,6 +6,9 @@ import StepItem from "../components/StepItem";
 import TestimonialSlider from "../features/testimonials/TestimonialSlider";
 import useScrollReveal from "../hooks/useScrollReveal";
 import { services, steps } from "../utils/data";
+import firstIllustration from "../assets/1st.png";
+import secondIllustration from "../assets/2nd.png";
+import thirdIllustration from "../assets/3rd.png";
 
 export default function Home() {
   useScrollReveal();
@@ -45,23 +48,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative h-80">
-          <div className="absolute bottom-6 left-6 h-32 w-44 rounded-[50%] bg-[#c8a174]" />
-          <div className="absolute bottom-10 right-6 h-36 w-48 rounded-[50%] bg-[#f05a1a] opacity-80" />
-
-          <div className="float absolute left-16 top-16">
-            <div className="text-7xl">👨‍💻</div>
-            <div className="-mt-5 ml-12 flex h-16 w-28 items-center justify-center rounded-xl bg-white shadow-lg">
-              💻
-            </div>
-          </div>
-
-          <div className="float float-delay absolute right-20 top-10">
-            <div className="text-7xl">🧑‍💼</div>
-            <div className="-mt-5 flex h-16 w-32 items-center justify-center rounded-xl bg-white shadow-lg">
-              💻
-            </div>
-          </div>
+        <div className="relative flex items-center justify-center">
+          <img
+            src={firstIllustration}
+            alt="Business Illustration"
+            className="w-full max-w-[520px] object-contain float"
+          />
         </div>
       </section>
 
@@ -87,12 +79,12 @@ export default function Home() {
       {/* SIMPLE SOLUTIONS */}
       <section className="fade-up bg-[#fff1e8] py-20">
         <div className="mx-auto grid max-w-5xl items-center gap-14 px-6 md:grid-cols-2">
-          <div className="relative h-80">
-            <div className="absolute bottom-8 left-12 h-40 w-48 rounded-3xl bg-[#f05a1a]" />
-            <div className="float absolute left-24 top-16 text-8xl">🧑‍💻</div>
-            <div className="absolute left-36 top-24 rounded-full bg-white px-4 py-2 text-[#f05a1a] shadow">
-              <MessageCircle size={22} />
-            </div>
+          <div className="relative flex items-center justify-center">
+            <img
+              src={secondIllustration}
+              alt="Simple Solutions Illustration"
+              className="w-full max-w-[450px] object-contain float"
+            />
           </div>
 
           <div>
@@ -139,21 +131,12 @@ export default function Home() {
           <Button>Read more</Button>
         </div>
 
-        <div className="relative h-80">
-          <div className="absolute right-24 top-8 flex gap-3">
-            <div className="flex h-16 w-20 items-center justify-center rounded-lg bg-blue-500 text-white shadow">
-              <BarChart3 />
-            </div>
-            <div className="flex h-16 w-20 items-center justify-center rounded-lg bg-green-400 text-white shadow">
-              <Eye />
-            </div>
-          </div>
-
-          <div className="absolute right-36 top-28 flex h-20 w-32 items-center justify-center rounded-xl bg-white shadow">
-            <Laptop size={38} />
-          </div>
-
-          <div className="float absolute bottom-10 right-24 text-8xl">🧑‍💼</div>
+        <div className="relative flex items-center justify-center">
+          <img
+            src={thirdIllustration}
+            alt="Agency Analytics Illustration"
+            className="w-full max-w-[450px] object-contain float"
+          />
         </div>
       </section>
 
