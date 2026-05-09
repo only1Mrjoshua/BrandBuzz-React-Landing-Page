@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: #f05a1a;
+  --peach: #fff1e8;
+  --dark: #111827;
+  --gray: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #d7f1f1;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-delay {
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.dot {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--orange);
+  opacity: 0.35;
+  animation: float 5s ease-in-out infinite;
+}
+
+.footer-wave {
+  height: 55px;
+  background: var(--orange);
+  border-radius: 100% 100% 0 0 / 50% 50% 0 0;
+}

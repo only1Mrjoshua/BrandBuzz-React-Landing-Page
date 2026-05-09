@@ -1,0 +1,182 @@
+import { ArrowDown, BarChart3, Eye, Laptop, MessageCircle } from "lucide-react";
+import Button from "../components/Button";
+import ServiceCard from "../components/ServiceCard";
+import StepItem from "../components/StepItem";
+import TestimonialSlider from "../features/testimonials/TestimonialSlider";
+import useScrollReveal from "../hooks/useScrollReveal";
+import { services, steps } from "../utils/data";
+
+export default function Home() {
+  useScrollReveal();
+
+  return (
+    <>
+      {/* HERO */}
+      <section
+        id="home"
+        className="fade-up relative mx-auto grid max-w-5xl items-center gap-12 px-6 pb-20 pt-16 md:grid-cols-2"
+      >
+        <span className="dot left-5 top-20" />
+        <span className="dot left-14 top-32" />
+        <span className="dot right-20 bottom-12" />
+
+        <div>
+          <h1 className="mb-5 text-4xl font-extrabold leading-tight md:text-5xl">
+            We create <br />
+            <span className="text-[#f05a1a]">solutions</span> for <br />
+            your business
+          </h1>
+
+          <p className="mb-7 max-w-md text-[#6b7280]">
+            Our team keeps a keen eye on emerging trends and technologies to
+            ensure your marketing campaigns remain cutting-edge.
+          </p>
+
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <Button>Get Started</Button>
+
+            <a href="#services" className="flex items-center gap-3 text-sm font-semibold">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full text-[#f05a1a] shadow">
+                <ArrowDown size={17} />
+              </span>
+              Explore more
+            </a>
+          </div>
+        </div>
+
+        <div className="relative h-80">
+          <div className="absolute bottom-6 left-6 h-32 w-44 rounded-[50%] bg-[#c8a174]" />
+          <div className="absolute bottom-10 right-6 h-36 w-48 rounded-[50%] bg-[#f05a1a] opacity-80" />
+
+          <div className="float absolute left-16 top-16">
+            <div className="text-7xl">👨‍💻</div>
+            <div className="-mt-5 ml-12 flex h-16 w-28 items-center justify-center rounded-xl bg-white shadow-lg">
+              💻
+            </div>
+          </div>
+
+          <div className="float float-delay absolute right-20 top-10">
+            <div className="text-7xl">🧑‍💼</div>
+            <div className="-mt-5 flex h-16 w-32 items-center justify-center rounded-xl bg-white shadow-lg">
+              💻
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="fade-up mx-auto max-w-5xl px-6 py-16">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-extrabold">
+            We Provide The Best <span className="text-[#f05a1a]">Services</span>
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-[#6b7280]">
+            Let us unleash the full potential of your business with our
+            data-driven strategies.
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map(service => (
+            <ServiceCard key={service.title} {...service} />
+          ))}
+        </div>
+      </section>
+
+      {/* SIMPLE SOLUTIONS */}
+      <section className="fade-up bg-[#fff1e8] py-20">
+        <div className="mx-auto grid max-w-5xl items-center gap-14 px-6 md:grid-cols-2">
+          <div className="relative h-80">
+            <div className="absolute bottom-8 left-12 h-40 w-48 rounded-3xl bg-[#f05a1a]" />
+            <div className="float absolute left-24 top-16 text-8xl">🧑‍💻</div>
+            <div className="absolute left-36 top-24 rounded-full bg-white px-4 py-2 text-[#f05a1a] shadow">
+              <MessageCircle size={22} />
+            </div>
+          </div>
+
+          <div>
+            <h2 className="mb-4 text-3xl font-extrabold">
+              Simple <span className="text-[#f05a1a]">Solutions!</span>
+            </h2>
+
+            <p className="mb-8 max-w-md text-[#6b7280]">
+              We understand that no two businesses are alike. That’s why we take
+              time to understand.
+            </p>
+
+            <div className="mb-8 space-y-5">
+              {steps.map((step, index) => (
+                <StepItem key={step.title} number={index + 1} {...step} />
+              ))}
+            </div>
+
+            <div className="flex gap-4">
+              <Button>Get Started</Button>
+              <Button variant="outline">Read more</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AGENCY */}
+      <section
+        id="about"
+        className="fade-up mx-auto grid max-w-5xl items-center gap-12 px-6 py-20 md:grid-cols-2"
+      >
+        <div>
+          <h2 className="mb-5 text-3xl font-extrabold">
+            Our <span className="text-[#f05a1a]">Agency</span>
+          </h2>
+
+          <p className="mb-7 max-w-md leading-relaxed text-[#6b7280]">
+            We believe in the power of data. Our analytics-driven approach
+            allows us to make informed decisions and optimize your marketing
+            efforts for maximum ROI. Let’s turn your data into actionable
+            insights.
+          </p>
+
+          <Button>Read more</Button>
+        </div>
+
+        <div className="relative h-80">
+          <div className="absolute right-24 top-8 flex gap-3">
+            <div className="flex h-16 w-20 items-center justify-center rounded-lg bg-blue-500 text-white shadow">
+              <BarChart3 />
+            </div>
+            <div className="flex h-16 w-20 items-center justify-center rounded-lg bg-green-400 text-white shadow">
+              <Eye />
+            </div>
+          </div>
+
+          <div className="absolute right-36 top-28 flex h-20 w-32 items-center justify-center rounded-xl bg-white shadow">
+            <Laptop size={38} />
+          </div>
+
+          <div className="float absolute bottom-10 right-24 text-8xl">🧑‍💼</div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section id="blog" className="fade-up mx-auto max-w-5xl overflow-hidden px-6 py-16">
+        <div className="mb-10 text-center">
+          <h2 className="text-3xl font-extrabold">What Clients Say!</h2>
+          <p className="mt-3 text-sm text-[#6b7280]">
+            See how our digital marketing agency helped clients achieve their goals.
+          </p>
+        </div>
+
+        <TestimonialSlider />
+      </section>
+
+      {/* CTA */}
+      <section id="contact" className="fade-up mx-auto max-w-4xl px-6 py-8">
+        <div className="flex flex-col items-center justify-between gap-5 rounded-xl bg-[#f05a1a] px-8 py-6 text-white shadow-xl sm:flex-row">
+          <h2 className="text-2xl font-bold">Ready to get started?</h2>
+          <button className="rounded-lg border border-white px-6 py-2 transition hover:bg-white hover:text-[#f05a1a]">
+            Contact Us
+          </button>
+        </div>
+      </section>
+    </>
+  );
+}
